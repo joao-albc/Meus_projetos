@@ -1,6 +1,12 @@
 cadastro = {}
 
 nome = {str(input('Nome do jogador(a): '))}
+'''
+partidas =  int(input(f'Quantas partidas {(cadastro['nome'])} jogou?'))
+
+Invalid Syntax, não sei qual era o problema =/
+
+'''
 partidas =  int(input(f'Quantas partidas {nome} jogou?'))
 gols =  {}
 gols_marcados = []
