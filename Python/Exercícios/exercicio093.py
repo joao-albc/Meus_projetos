@@ -1,25 +1,27 @@
 cadastro = {}
 
-nome = {str(input('Nome do jogador(a): '))}
-'''
-partidas =  int(input(f'Quantas partidas {(cadastro['nome'])} jogou?'))
-
-Invalid Syntax, não sei qual era o problema =/
-
-'''
-partidas =  int(input(f'Quantas partidas {nome} jogou?'))
-gols =  {}
+cadastro['nome'] = {str(input('Nome do jogador(a): '))}
+cadastro['partidas'] =  int(input(f'Quantas partidas {(cadastro["nome"])} jogou?'))
+#partidas =  int(input(f'Quantas partidas {nome} jogou?'))
 gols_marcados = []
-for c in range(1,partidas + 1):
+
+for c in range(1,cadastro['partidas'] + 1):
     valor = int(input(f'Quantos gols na partidas {(c)}? '))
     gols_marcados.append(valor)
 print ('-='*10)
-gols = gols_marcados
-#print (gols)
-total = {'total':sum(gols_marcados)}
-#print (total)
-cadastro['nome'] = nome
+
 cadastro['gols'] = gols_marcados
-cadastro['total'] = total
+cadastro['total'] = sum(gols_marcados)
 
 print (cadastro)
+print ('-='*10)
+
+for k,v in cadastro.items():
+    print(f'O campo {k} recebeu o valor {v}')
+
+print ('-='*10)
+
+print(f'O jogador(a) {cadastro["nome"]} jogou {len(cadastro["partidas"])}')
+
+for k, v in (cadastro['partidas']):
+    print(f'Na partida {k}, fez {v} gols')
