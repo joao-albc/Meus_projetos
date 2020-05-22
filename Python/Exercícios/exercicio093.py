@@ -1,8 +1,7 @@
 cadastro = {}
 
 cadastro['nome'] = {str(input('Nome do jogador(a): '))}
-cadastro['partidas'] =  int(input(f'Quantas partidas {(cadastro["nome"])} jogou?'))
-#partidas =  int(input(f'Quantas partidas {nome} jogou?'))
+cadastro['partidas'] =  int(input(f'Quantas partidas {(cadastro["nome"])} jogou? '))
 gols_marcados = []
 
 for c in range(1,cadastro['partidas'] + 1):
@@ -21,7 +20,7 @@ for k,v in cadastro.items():
 
 print ('-='*10)
 
-print(f'O jogador(a) {cadastro["nome"]} jogou {len(cadastro["partidas"])}')
+print(f'O jogador(a) {cadastro["nome"]} jogou {cadastro["partidas"]}')
 
-for k, v in (cadastro['partidas']):
-    print(f'Na partida {k}, fez {v} gols')
+for k, v in enumerate (gols_marcados):
+     print(f'Na partida {k}, fez {v} gols')
