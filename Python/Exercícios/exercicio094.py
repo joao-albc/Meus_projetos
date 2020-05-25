@@ -34,7 +34,7 @@ for c in cadastros:
 media = soma/len(cadastros)
 print (f'A) Foram realizados {len(cadastros)} cadastros')
 
-print (f'B) A média de idade foi {media:2.5f}')
+print (f'B) A média de idade foi {media:2.2f}')
 print (f'C) As mulheres cadastradas foram' ,end='')
 for p in cadastros:
     if p["Gênero"] in"Ff":
