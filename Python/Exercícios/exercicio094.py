@@ -43,5 +43,9 @@ print()
 print (f'D) Lista de pessoas acima da média:', end='')
 print()
 for p in cadastros:
-    if p["Idade"] > (media):
-        print(f'{p["nome"]} com {p["Idade"]} anos', end= '')
+    if p["Idade"] >= (media):
+        print('     ', end='')
+        for k, v in pitems():
+            print (f'{k} = {v}; ', end='')
+        print()
+print ('<< ENCERRADO >>')
