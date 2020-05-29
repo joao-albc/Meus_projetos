@@ -2,27 +2,25 @@
 
 cadastros = []
 cadastro = {}
-gols_marcados = list()
+
 while True:
     cadastro.clear
+    gols_marcados = list()
     
     cadastro['nome'] = {str(input('Nome do jogador(a): '))}
     cadastro['partidas'] =  int(input(f'Quantas partidas {(cadastro["nome"])} jogou? '))
-
-
     for c in range(1,cadastro['partidas'] + 1):
         valor = int(input(f'Quantos gols na partidas {(c)}? '))
         gols_marcados.append(valor)
     print ('-='*10)
 
     cadastro['gols'] = gols_marcados
-    #ARRUMAR OS GOLS MARCADOS
     cadastro['total'] = sum(gols_marcados)
 
     cadastros.append(cadastro.copy())
     gols_marcados.clear
-    #Continuar? Sim ou Não é preciso corrigir essa parte
-    
+
+    #Validação do CONTINUAR
     while True:
         continuar = str(input('Deseja continuar? [S/N]')).upper()[0]
         if continuar not in 'NnSs':
@@ -36,19 +34,26 @@ while True:
             break
     if continuar in 'Nn':
         print (f'{"="*4}Cadastro Finalizado{"="*4}')
+        print()
         break
-print (cadastros)
 
-''''
-print (cadastro)
-print ('-='*10)
+#Enumerate para a lista e .items para acessar os dicionários
+print ('Sobre qual deles vocês deseja saber mais?')
+print ()
+print (f'cod{" "*6}nome{" "*10}gols{" "*6}total')
+print(f'{"-"*30}')
+for i, v in enumerate (cadastros):
+    print (f'{i}{" "*6}{v["nome"]}{" "*6}{v["gols"]}{" "*6}{v["total"]}')
 
-for k,v in cadastro.items():
-    print(f'O campo {k} recebeu o valor {v}')
 
-print ('-='*10)
-
-print(f'O jogador(a) {cadastro["nome"]} jogou {cadastro["partidas"]}')
-
-for k, v in enumerate (gols_marcados):
-     print(f'Na partida {k}, fez {v} gols')'''
+'''
+    for k,v in i.items():
+        if k == "nome":
+            print (f'Digite {i[0]} para saber de print {v}')
+'''
+'''
+Estava com dificuldade para fazer a divisão, por isso explicitei
+print (f'Índice {i[0]}')
+print (f'Chave {k}')
+print (f'Valor {v}')
+'''
