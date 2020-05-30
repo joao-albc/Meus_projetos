@@ -37,13 +37,26 @@ while True:
         print()
         break
 
-#Enumerate para a lista e .items para acessar os dicionários
-print ('Sobre qual deles vocês deseja saber mais?')
+#Enumerate para a lista e .items para acessar os dicionários, isso não funcionou
+print(f'{"="*30}')
 print ()
 print (f'cod{" "*6}nome{" "*10}gols{" "*6}total')
 print(f'{"-"*30}')
 for i, v in enumerate (cadastros):
     print (f'{i}{" "*6}{v["nome"]}{" "*6}{v["gols"]}{" "*6}{v["total"]}')
+print(f'{"="*30}')
+print ()
+while True:
+    escolha = int(input(f'Mostrar dados de qual jogador? (999 para terminar:) '))
+    if escolha == 999:
+        print (f'{"="*15}FIM DO PROGRAMA{"="*15}')
+        break
+    for i, v in enumerate (cadastros):
+        if i == escolha:
+            print (f'{"="*15}{v["nome"]}{"="*15}')
+            for c in range(0,len(v["gols"])):
+                print (f'Na {c+1}ª partida fez {v["gols"][c]} gols')
+            print(f'{"-"*30}')
 
 
 '''
