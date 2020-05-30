@@ -57,6 +57,10 @@ while True:
             for c in range(0,len(v["gols"])):
                 print (f'Na {c+1}ª partida fez {v["gols"][c]} gols')
             print(f'{"-"*30}')
+    else:
+        print("ERRO! este número de cadastro não foi encontrado!")
+        print()
+
 
 
 '''
