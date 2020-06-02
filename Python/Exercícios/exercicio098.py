@@ -1,10 +1,11 @@
 import time
-'''
-def contador(ini, fim, passo):
-    while True:
-        c = 1
-        ini passo
 
-'''
+def contador():
+    ini = int(input('Início: '))
+    fim = int(input('Fim: '))
+    passo = int(input('Passo: '))
+    total = ini - fim
+    print (f'Total {total}')
+    c = 1
 
-print (10 // 3)
+contador()
