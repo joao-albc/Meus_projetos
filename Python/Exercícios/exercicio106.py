@@ -1,3 +1,7 @@
+cores = ()
+
+def título()
+
 def fun_ou_bibl():
     from time import sleep
     while True:
