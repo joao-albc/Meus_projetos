@@ -29,7 +29,7 @@ def metade(num, mon=False):
         
 #Função adicionada pelo exercício 108
 def monetario(num):
-    num = float(num)
+    num = (f'{num:.2f}')
     res = (f'R$ {num}')
     return res.replace(".",",")
 
