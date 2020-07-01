@@ -4,15 +4,21 @@ from UtilidadesCeV import dado
 import strings
 from random import randint
 
-#Valores aleatórios
+'''
 valor = randint(1,10)
 print (f'Valor: {valor}')
+'''
+#Valores aleatórios
+
+
+escolha = dado.leiaDinheiro("Digite um valor: ")
+valor = escolha
 aumento = randint(1,100)
-print (f'Aumento: {aumento}%')
+#print (f'Aumento: {aumento}%')
 reduzir = randint(1,100)
-print (f'Valor: {reduzir}%')
+#print (f'Redução: {reduzir}%')
 
 
 print (strings.caixa_linha('Resumo de valor'))
-v = dado.leiaDinheiro(valor)
 print (moeda.resumo(valor,aumento, reduzir))
+

@@ -1,47 +1,38 @@
 #Funções do exercício 107
-def aumentar(num, porc, mon=False):
+def aumentar(num, porc):
     f = num+(num * (porc/100))
-    if mon == True:
-        return monetario(f)
-    else:
-        return f
+    return f
 
-def diminuir(num, porc, mon=False):
+def diminuir(num, porc):
     f = num - (num * (porc/100))
-    if mon == True:
-        return monetario(f)
-    else:
-        return f
+    return f
 
-def dobro(num, mon=False):
+def dobro(num):
     f = num * 2
-    if mon == True:
-        return monetario(f)
-    else:
-        return f
+    return f
 
-def metade(num, mon=False):
+def metade(num):
     f = num / 2
-    if mon == True:
-        return monetario(f)
-    else:
-        return f
+    return f
         
 #Função adicionada pelo exercício 108
+'''
 def monetario(num):
     num = (f'{num:.2f}')
     res = (f'R$ {num}')
     return res.replace(".",",")
+'''
 
 #Exercício 109: Inserir um parâmetro extra para verificar se queremos que o número retorne com R$ ou não
 #Exercício 110: Adicionar uma função resumo()
 
 def resumo(num, aumento, reducao):
     return (f"""
-    Valor analisado:\t\t{monetario(num)}
-    Com o aumento de {aumento}%:\t{aumentar(num, aumento, True)}
-    Com a redução de {reducao}%\t{diminuir(num, reducao, True)}
-    O dobro de {num} é:\t\t{dobro(num, True)}
-    A metade de {num} é\t\t{metade(num, True)}
+    Valor analisado:\t\tR$ {(num):.2f}
+    Com o aumento de {aumento}%:\tR$ {aumentar(num, aumento):.2f}
+    Com a redução de {reducao}%:\tR$ {diminuir(num, reducao):.2f}
+    O dobro de {num} é:\t\tR$ {dobro(num):.2f}
+    A metade de {num} é\t\tR$ {metade(num):.2f}
     """)
 
+#print (resumo(10,5,8))
